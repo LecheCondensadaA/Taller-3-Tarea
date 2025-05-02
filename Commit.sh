@@ -5,6 +5,7 @@ echo "Ingresa el commit: " #Pide el commit
 read men #lee el commit
 
 #inserte comandos de git para subir el R.E.P.O.
+git pull origin main --rebase
 git add .
 git commit -m "$men"
 git push origin main
