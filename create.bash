@@ -25,7 +25,10 @@ mkdir -p "$output_dir"
 
 # Crear los archivos
 for ((i = 1; i <= num_files; i++)); do
-  name=$(random_name)     #test
+  # Se utiliza la funcion random_name para generar el nombre del archivo
+  name=$(random_name) 
+  # Despues se elige una de las posibles extenciones nombradas anterior mente
   ext=${extensions[$RANDOM % ${#extensions[@]}]}
+  # Finalmente, crea el archivo utilizando el nombre y extencion generada
   touch "$output_dir/${name}${ext}"
 done
