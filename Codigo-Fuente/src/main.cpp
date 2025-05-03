@@ -39,15 +39,16 @@ int main(int argc, char** argv){
         // Handle the case where the directory doesn't exist 
         cerr << "Directory not found." << endl; 
         create_directory(dir1); 
-        chrono::high_resolution_clock::time_point fin = chrono::high_resolution_clock::now();
         cout << "directorio creado! " << dir1;
         cout <<endl;
-        // Calculamos duracion en segudos
-        auto duration_creation = std::chrono::duration_cast<std::chrono::seconds>(fin - ini);
 
-        // Imprimimos el tiempo de duracion
-        printf("La creacion y ordenamiento del vector llevo %.4f segundos\n", static_cast<double>(duration_creation.count()));
     }
+    chrono::high_resolution_clock::time_point fin = chrono::high_resolution_clock::now();
+    // Calculamos duracion en segudos
+    auto duration_creation = chrono::duration_cast<chrono::seconds>(fin - ini);
+
+    // Imprimimos el tiempo de duracion
+    printf("La creacion y ordenamiento del vector llevo %.4f segundos\n", static_cast<double>(duration_creation.count()));
     cout << "Vector creado!" <<endl;
     return 0;
 }
