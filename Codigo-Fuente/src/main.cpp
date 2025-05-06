@@ -48,6 +48,7 @@ int main(int argc, char** argv){
 }
 
 int busqueda_secuencial(vector <string> a, string arch, path dir){
+    chrono::high_resolution_clock::time_point sta = chrono::high_resolution_clock::now();
 	int i;
 	for (i=0; i < a.size(); i++) {
 		if (a[i] == dir.string() + "/" + arch ){
@@ -55,12 +56,19 @@ int busqueda_secuencial(vector <string> a, string arch, path dir){
 			return i;
 		}
 	}
+    chrono::high_resolution_clock::time_point fin = chrono::high_resolution_clock::now();
+    auto duration_creation = std::chrono::duration_cast<std::chrono::seconds>(fin - sta);
+    printf("La busqueda secuencial llevo %.4f segundos\n", static_cast<double>(duration_creation.count()));
 	return -1;
 }
 int busqueda_binaria(vector<string> a, string x){
 	int l,m,r;
+    chrono::high_resolution_clock::time_point sta = chrono::high_resolution_clock::now();
 	sort(a.begin(), a.end()); //Por mientras
-	
+    chrono::high_resolution_clock::time_point fin = chrono::high_resolution_clock::now();
+    auto duration_creation = std::chrono::duration_cast<std::chrono::seconds>(fin - sta);
+    printf("El sort llevo %.4f segundos\n", static_cast<double>(duration_creation.count()));
+
 	l=0;
 	r=a.size()-1;
 	m=r/2;
@@ -75,5 +83,8 @@ int busqueda_binaria(vector<string> a, string x){
 		}
 		m=(l+r)/2;
 	}
+    chrono::high_resolution_clock::time_point fin = chrono::high_resolution_clock::now();
+    auto duration_creation = std::chrono::duration_cast<std::chrono::seconds>(fin - sta);
+    printf("La busqueda binaria llevo %.4f segundos\n", static_cast<double>(duration_creation.count()));
 	return -1;
 }
