@@ -18,6 +18,6 @@ int busqueda_binaria(vector<string> a, string x, path dir){
         }  
         m ← (l+r)/2;  
     }  
-    print "No se encontro el archivo y la busqueda binaria tardo" + duracion + "milisegundos\n"  
+    print "No se encontro el archivo y la busqueda binaria tardo" + duracion + "milisegundos"  
     return -1;  
 }
