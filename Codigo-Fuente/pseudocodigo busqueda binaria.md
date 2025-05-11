@@ -6,18 +6,18 @@ int busqueda_binaria(vector<string> a, string x, path dir){
 	while(l<=r) do {  
 		if (dir.string()+"/"+x < a[m]) then {  
 		r ← m-1;  
-        }
-		else{
-            if (dir.string()+"/"+x==a[m]) then {
-                print "La busqueda binaria tardo" + duracion + "milisegundos";
-                return m;
-            }
-            else{
-                l ← m+1;
-            }
-        }
-        m ← (l+r)/2;
-    }
-    print "No se encontro el archivo y la busqueda binaria tardo" + duracion + "milisegundos\n"
-    return -1;
+        }  
+		else{  
+            if (dir.string()+"/"+x==a[m]) then {  
+                print "La busqueda binaria tardo" + duracion + "milisegundos";  
+                return m;  
+            }  
+            else{  
+                l ← m+1;  
+            }  
+        }  
+        m ← (l+r)/2;  
+    }  
+    print "No se encontro el archivo y la busqueda binaria tardo" + duracion + "milisegundos\n"  
+    return -1;  
 }
