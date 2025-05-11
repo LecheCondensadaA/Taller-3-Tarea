@@ -1,15 +1,15 @@
 # pseudocodigo busqueda binaria  
-int busqueda_binaria(vector<string> a, string x, path dir){
-	l ← 0;
-	r ← a.size()-1;
-	m ← r/2;
-	while(l<=r){
-		if (dir.string()+"/"+x < a[m]){
-		r ← m-1;
+int busqueda_binaria(vector<string> a, string x, path dir){  
+	l ← 0;  
+	r ← a.size()-1;  
+	m ← r/2;  
+	while(l<=r) do {  
+		if (dir.string()+"/"+x < a[m]) then {  
+		r ← m-1;  
         }
 		else{
-            if (dir.string()+"/"+x==a[m]){
-                print "La busqueda binaria tardo" + duracion "milisegundos";
+            if (dir.string()+"/"+x==a[m]) then {
+                print "La busqueda binaria tardo" + duracion + "milisegundos";
                 return m;
             }
             else{
@@ -18,6 +18,6 @@ int busqueda_binaria(vector<string> a, string x, path dir){
         }
         m ← (l+r)/2;
     }
-    print "No se encontro el archivo y la busqueda binaria tardo" + duracion "milisegundos\n"
+    print "No se encontro el archivo y la busqueda binaria tardo" + duracion + "milisegundos\n"
     return -1;
 }
