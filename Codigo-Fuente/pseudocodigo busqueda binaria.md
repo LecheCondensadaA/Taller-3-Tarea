@@ -1,14 +1,14 @@
 # pseudocodigo busqueda binaria  
-busqueda_binaria(vector<string> a, string x, path dir){  
+busqueda_binaria(vector<string> a, string arch, path dir){  
 	l ← 0;  
 	r ← a.size()-1;  
 	m ← r/2;  
 	while(l<=r) do {  
-		if (dir.string()+"/"+x < a[m]) then {  
+		if (dir.string()+"/"+arch < a[m]) then {  
 			r ← m-1;  
         }  
 		else{  
-            if (dir.string()+"/"+x = a[m]) then {  
+            if (dir.string()+"/"+arch = a[m]) then {  
                 print "La busqueda binaria tardo" + duracion + "milisegundos";  
                 return m;  
             }  
