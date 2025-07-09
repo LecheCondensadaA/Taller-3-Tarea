@@ -1,5 +1,3 @@
-//Include's
+#include <filesystem>
 
-// Define's
-
-// Declaracion de funciones
+void experimentos(std::filesystem::path& dir1);
